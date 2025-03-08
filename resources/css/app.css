@@ -1,0 +1,26 @@
+@import 'https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css';
+@import 'https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css';
+@import 'https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css';
+
+
+
+
+/* resources/css/app.css */
+
+/* Importing JS Vector Map CSS */
+@import '../assets/libs/jsvectormap/css/jsvectormap.min.css';
+
+/* Importing Swiper CSS */
+@import '../assets/libs/swiper/swiper-bundle.min.css';
+
+
+
+@import '../assets/css/bootstrap.min.css';
+@import '../assets/css/icons.min.css';
+@import '../assets/css/icons5.min.css';
+/* @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'; */
+@import '../assets/css/app.min.css';
+@import '../assets/css/custom-table.css';
+@import '../assets/css/custom.css';
+
+/* Other common styles can go here */

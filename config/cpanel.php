@@ -1,0 +1,227 @@
+<?php
+
+$baseUrl_sandbox = 'https://ws.sbx.aramex.net/';
+$baseUrl = 'https://ws.aramex.net/';
+$jtiBaseUrl = 'https://api.qa-jtides.com/MMDESUAE/EES-IN/OMS/V1/';
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | Aramex Details
+    |--------------------------------------------------------------------------
+    */
+    'aramex' => [
+        'base_url' => env('IS_ENABLE_ARAMEX_PRODUCTION') ? $baseUrl : $baseUrl_sandbox,
+        'username' => env('SHIP_API_USERNAME'),
+        'password' => env('SHIP_API_PASSWORD'),
+    ],
+
+    // // ==============Aramex Sandbox Account=====================
+    // 'clientInfo-sandbox' => [
+    //     "UserName" => "testingapi@aramex.com",
+    //     "Password" => 'R123456789$r',
+    //     'AccountNumber' => 45796,
+    //     'AccountPin' => 116216,
+    // ],
+
+    // // ==============Aramex Production Account=====================
+    // 'clientInfo' => [
+    //     "UserName" => "mikhail.buzumurga@jti.com",
+    //     "Password" => 'Aramex1299$',
+    //     'AccountNumber' => 72086369,
+    //     'AccountPin' => 460343,
+    // ],
+
+    'clientInfo' => env('IS_ENABLE_ARAMEX_PRODUCTION') ?
+        [
+            "UserName" => "mikhail.buzumurga@jti.com",
+            "Password" => 'Aramex1299$',
+            'AccountNumber' => 72086369,
+            'AccountPin' => 460343,
+        ] :
+        [
+            "UserName" => "testingapi@aramex.com",
+            "Password" => 'R123456789$r',
+            'AccountNumber' => 45796,
+            'AccountPin' => 116216,
+        ],
+
+    'aramexValidCities' => [
+        "Abadilah",
+        "Abu Dhabi",
+        "Abu Hayl",
+        "Abu Shagara",
+        "Adhan",
+        "Ajman",
+        "Ajman City",
+        "Akamiyah",
+        "Al Ain City",
+        "Al Ardiyah",
+        "Al Azrah",
+        "Al Dharbaniyah",
+        "Al Dhayd",
+        "Al Duss",
+        "Al Fahiya",
+        "Al Falaj",
+        "Al Fulayyah",
+        "Al Hamraniyah",
+        "Al Hamriyah",
+        "Al Hayl",
+        "Al Hayr",
+        "Al Jazirah",
+        "Al Jazirah Al Hamra",
+        "Al Khan",
+        "Al Khashfah",
+        "Al Khateem",
+        "Al Lebsa",
+        "Al Madam",
+        "Al Mafraq",
+        "Al Manak",
+        "Al Manamah",
+        "Al Maqta",
+        "Al Marfa",
+        "Al Qazimiya",
+        "Al Qouz",
+        "Al Raafah",
+        "Al Rafaah",
+        "Al Rams",
+        "Al Ruwaiya",
+        "Al Ruways",
+        "Al Salam Living City",
+        "Al ShaM",
+        "Al Tawoon",
+        "Al Wasit",
+        "Al Zahra",
+        "Awanat",
+        "Badiyah",
+        "Barakah",
+        "Beda Zayed",
+        "Bu Hasa",
+        "Bur Dubai",
+        "Bustan",
+        "Buteen",
+        "Buteena",
+        "Dasman",
+        "Deira",
+        "Dhaid",
+        "Diba",
+        "Diba Al Baya",
+        "Diba Al Hesn",
+        "Dubai",
+        "Dubai Internet City",
+        "Falaj Al Mulla",
+        "Fujairah",
+        "Furfar",
+        "Ganthoot",
+        "Gayathi",
+        "Ghafia",
+        "Gheweifat",
+        "Ghubaiba",
+        "Ghurfah",
+        "Habshan",
+        "Hamariya",
+        "Hamim",
+        "Hassan Dibba",
+        "Hatta",
+        "Horl Al Anz",
+        "Jabel Dhana",
+        "Jarf",
+        "Jazzat",
+        "Jebal Ali",
+        "Jumeirah",
+        "Kalba",
+        "Karama",
+        "Khannur",
+        "Kharayan",
+        "Kharran",
+        "Khatt",
+        "Khawr Fakkan",
+        "Khawr Kalba",
+        "Khawr Khuwayr",
+        "Kidfa",
+        "Layyah",
+        "Liwa Region",
+        "Madinat Zayed",
+        "Mafraq",
+        "Maisaloon",
+        "Majjarah",
+        "Mansoora",
+        "Masafi",
+        "Masfut",
+        "Mina Sufooh",
+        "Mirdif",
+        "Mushrif",
+        "Mussafah",
+        "Muwafja",
+        "Nabbah",
+        "Nakheel",
+        "Nakheelat",
+        "Nasariya",
+        "Qasimiya",
+        "Qidfa",
+        "Qusais",
+        "Ramaqiya",
+        "Ramlah",
+        "Ramtha",
+        "Ras Al Khaimah city",
+        "Rashideya",
+        "Rashidya",
+        "Reem Community",
+        "Rima",
+        "Rolla",
+        "Rughaylat",
+        "Saabah",
+        "Saif",
+        "Samnan",
+        "Saqamqam",
+        "Satwa",
+        "Shahba",
+        "Sham",
+        "Shandaghah",
+        "Sharjah",
+        "Sherqan",
+        "Siji",
+        "Sila",
+        "Sir Baniyas",
+        "Suwayhan",
+        "Sweihan",
+        "Tarif",
+        "Tarif Kalba",
+        "Um Al Nar",
+        "Umm Al Ashtan",
+        "Umm Al Quwain",
+        "Umm Kanoor",
+        "Wadi Shi",
+        "Warsan",
+        "Wasit",
+        "Yarmook"
+    ],
+
+    // "ClientInfo": {
+    //         "UserName": "testingapi@aramex.com",
+    //         "Password": "R123456789$r",
+    //         "Version": "v1.0",
+    //         "AccountNumber": "45796",
+    //         "AccountPin": "116216",
+    //         "AccountEntity": "DXB",
+    //         "AccountCountryCode": "AE",
+    //         "Source": 24,
+    //         "PreferredLanguageCode": null
+    //     }
+
+
+    /*
+    |--------------------------------------------------------------------------
+    | JTI Details
+    |--------------------------------------------------------------------------
+    */
+    'jti' => [
+        'base_url' => $jtiBaseUrl,
+        // 'username' => env('SHIP_API_USERNAME'),
+        // 'password' => env('SHIP_API_PASSWORD'),
+    ],
+
+
+
+];
